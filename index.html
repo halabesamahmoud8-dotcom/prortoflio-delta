@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Youssef // Cyber Security & Data Analytics Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Cairo:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Hacker & Cyberpunk Theme */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Share Tech Mono', monospace, 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #050b14;
+            color: #c0c7d6;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 8%;
+            background-color: #080f1e;
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #00ff66;
+            text-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #8b9bb4;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #00ff66;
+            text-shadow: 0 0 6px rgba(0, 255, 102, 0.6);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4rem 8%;
+            background: radial-gradient(circle at 10% 20%, #0a192f 0%, #030712 90%);
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .terminal-badge {
+            display: inline-block;
+            background: rgba(0, 255, 102, 0.1);
+            color: #00ff66;
+            padding: 0.4rem 0.9rem;
+            border: 1px solid rgba(0, 255, 102, 0.3);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .highlight {
+            color: #00ff66;
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #8b9bb4;
+            max-width: 550px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.6rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .primary-btn {
+            background-color: #00ff66;
+            color: #030712;
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.3);
+        }
+
+        .primary-btn:hover {
+            background-color: #00cc52;
+            box-shadow: 0 0 25px rgba(0, 255, 102, 0.6);
+        }
+
+        .secondary-btn {
+            border: 1px solid #00ff66;
+            color: #00ff66;
+        }
+
+        .secondary-btn:hover {
+            background-color: rgba(0, 255, 102, 0.1);
+        }
+
+        /* Cyber Logo Image Container */
+        .hero-image-container {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            border-radius: 12px;
+            padding: 10px;
+            background: #080f1e;
+            border: 2px solid #00ff66;
+            box-shadow: 0 0 25px rgba(0, 255, 102, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cyber-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* General Section */
+        .section {
+            padding: 5rem 8%;
+            border-bottom: 1px solid #111827;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #00ff66;
+            letter-spacing: 1px;
+        }
+
+        .dark-bg {
+            background-color: #030712;
+        }
+
+        .about-text {
+            max-width: 800px;
+            font-size: 1.15rem;
+            color: #9ca3af;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: #080f1e;
+            border: 1px solid #1e293b;
+            padding: 2rem;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            border-color: #00ff66;
+            box-shadow: 0 0 15px rgba(0, 255, 102, 0.1);
+        }
+
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+        }
+
+        .skill-card p {
+            color: #8b9bb4;
+            font-size: 0.95rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #080f1e;
+            border: 1px solid #1e293b;
+            padding: 2rem;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: #8b9bb4;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tags {
+            margin-bottom: 1.5rem;
+        }
+
+        .tags span {
+            background: rgba(0, 255, 102, 0.08);
+            color: #00ff66;
+            border: 1px solid rgba(0, 255, 102, 0.2);
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        .project-link {
+            color: #00ff66;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .contact-btn {
+            padding: 0.8rem 1.5rem;
+            background: #080f1e;
+            border: 1px solid #1e293b;
+            border-radius: 4px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+
+
+            .contact-btn:hover {
+                border-color: #00ff66;
+                color: #00ff66;
+            }
+
+            /* Footer */
+            footer {
+                background: #030712;
+                color: #4b5563;
+                text-align: center;
+                padding: 2rem;
+                font-size: 0.85rem;
+                border-top: 1px solid #111827;
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">MAHMOUD._.YOUSSEF</div>
+        <nav>
+            <ul>
+                <li><a href="#about">[ ABOUT ]</a></li>
+                <li><a href="#skills">[ SKILLS ]</a></li>
+                <li><a href="#projects">[ PROJECTS ]</a></li>
+                <li><a href="#contact">[ CONTACT ]</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="terminal-badge">> ACCESS GRANTED: WELCOME</div>
+            <h1>Hi, I'm <span class="highlight">Mahmoud Youssef</span></h1>
+            <p>Cyber Security Enthusiast | Computer Science & Information Systems | Data Science & Business Analytics
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">VIEW PROJECTS</a>
+                <a href="#contact" class="btn secondary-btn">INITIALIZE CONTACT</a>
+            </div>
+        </div>
+
+        <!-- الشعار في الجنب بإطار سيبراني فخم -->
+        <div class="hero-image-container">
+            <!-- تأكد أنك حافظ الصورة الجديدة عندك في الفولدر باسم logo.png -->
+            <img src="logo.png" alt="Delta Academy Logo" class="cyber-logo">
+            <div class="scanner-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>// 01. ABOUT_ME</h2>
+        <p class="about-text">
+            A dedicated Computer Science and Information Systems student driven by the intersection of secure system
+            architecture and data-driven business intelligence. Specialized in identifying vulnerabilities, analyzing
+            complex datasets, and building resilient digital solutions.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section dark-bg">
+        <h2>// 02. SYSTEM_SKILLS</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Cyber Security</h3>
+                <p>Network Security, Ethical Hacking, Vulnerability Assessment, Cryptography</p>
+            </div>
+            <div class="skill-card">
+                <h3>Data Science & Analytics</h3>
+                <p>Python (Pandas, NumPy), SQL, Statistical Analysis, EDA</p>
+            </div>
+            <div class="skill-card">
+                <h3>Data Visualization</h3>
+                <p>Power BI, Advanced Dashboards, Business Intelligence Metrics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>// 03. EXECUTED_PROJECTS</h2>
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <h3>Sales & Business Intelligence Pipeline</h3>
+                <p>Processed massive retail datasets using Python and SQL, building automated interactive reporting
+                    dashboards for corporate forecasting.</p>
+                <div class="tags">
+                    <span>Python</span> <span>SQL</span> <span>Power BI</span>
+                </div>
+                <a href="#" class="project-link">ACCESS REPO &rarr;</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h3>Secure Network Monitoring Framework</h3>
+                <p>Designed a simulation framework for tracking abnormal traffic patterns and analyzing security logs
+                    for enterprise defense.</p>
+                <div class="tags">
+                    <span>Cyber Security</span> <span>Networking</span> <span>Python</span>
+                </div>
+                <a href="#" class="project-link">ACCESS REPO &rarr;</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section dark-bg">
+        <h2>// 04. ESTABLISH_CONNECTION</h2>
+        <p>Ready to collaborate on security architectures or data intelligence operations? Get in touch.</p>
+        <div class="contact-links">
+            <a href="https://linkedin.com" target="_blank" class="contact-btn">LinkedIn</a>
+            <a href="https://github.com" target="_blank" class="contact-btn">GitHub</a>
+            <a href="mailto:your.email@example.com" class="contact-btn">Secure Email</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>ROOT@MAHMOUD-YOUSSEF:~$ SECURE_CONNECTION_TERMINATED © 2026</p>
+    </footer>
+
+</body>
+
+</html>
